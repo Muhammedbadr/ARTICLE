@@ -1,0 +1,23 @@
+<nav class="navbar is-info" role="navigation" aria-label="main navigation">
+  <div class="container 	">
+    <div class="navbar-brand">
+      <%= link_to "ARTICLE", root_path, class: "navbar-item title has-text-white mb-0" %>
+    </div>  
+    <div class="navbar-menu ">
+      <div class="navbar-end ">
+        <div class="navbar-item">
+          <div class="buttons">
+            <%= link_to "New article", "#", class: "button is-link is-small" %>
+            <% if user_signed_in? %>
+              <%= link_to "Edit own file", edit_user_registration_path, class: "button is-link is-small" %>
+              <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "button is-danger is-small" %>
+            <% else %>
+              <%= link_to "Sign in", new_user_registration_path, class: "button is-warning is-small" %>
+              <%= link_to "Log in", user_session_path, class: "button is-link is-small" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
