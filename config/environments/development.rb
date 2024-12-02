@@ -65,6 +65,16 @@ Rails.application.configure do
   config.assets.quiet = true
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # Looking to send emails in production? Check out our Email API/SMTP product!
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  user_name: '5bfec6f77a077d',
+  password: 'e9ce2ccbaef269',
+  address: 'sandbox.smtp.mailtrap.io',
+  host: 'sandbox.smtp.mailtrap.io',
+  port: '2525',
+  authentication: :login
+}
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 

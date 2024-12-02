@@ -2,11 +2,13 @@
 <html>
   <head>
     <title><%= content_for(:title) || "Rails Blog" %></title>
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 
     <%= yield :head %>
 
@@ -14,11 +16,23 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
   <body>
-<%= render partial: "layouts/navbar" %>
-    <%= yield %>
+      <%= render partial: "layouts/navbar" %>
+    <div class="wrapper">
+      <div class="container  pt-4">  
+      
+      <%= yield %>
+      </div>
+    </div>
+    
+    <footer class="footer  ">
+      <p class="has-text-centered">
+        <a href="https://academy.hsoub.com">
+          Hsoub Academy
+        </a> &copy; 2023. All rights reserved.
+      </p>
+    </footer>
   </body>
 </html>
