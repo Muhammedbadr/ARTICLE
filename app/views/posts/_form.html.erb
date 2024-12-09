@@ -28,10 +28,10 @@
     <%= form.file_field :image , class:"input"%>
   </div>
 
-  <div class="field">
+  <div class="field" >
     <%= form.label :category_id, "category id " , class:"label" %>
-  <div class="select">
-    <%= form.collection_select :category_id , Category.order(:name) ,:id, :name    %>
+    <div class="select">
+      <%= form.collection_select :category_id , Category.order(:name) ,:id, :name    %>
     </div>
   </div>
 

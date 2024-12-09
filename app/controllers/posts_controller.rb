@@ -4,11 +4,18 @@ class PostsController < ApplicationController
 
   # GET /posts
   # GET /posts.json
-  def index
-  end 
+  
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    if params[:category_id].present?
+      @posts = Post.where(category_id: params[:category_id].to_i)
+    elsif params[:username].present?
+      user = User.find_by(username: params[:username])
+      @posts = user.posts.all
+    else
+      @posts = Post.all.order("created_at DESC")
+    end
+    
   end
 
   # GET /posts/1 or /posts/1.json

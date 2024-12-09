@@ -7,7 +7,7 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <%= link_to "New article", "#", class: "button is-light is-small" %>
+            <%= link_to "New article", new_post_path , class: "button is-light is-small" %>
             <% if user_signed_in? %>
               <%= link_to "Edit own file", edit_user_registration_path, class: "button is-link is-small" %>
               <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "button is-danger is-small" %>
