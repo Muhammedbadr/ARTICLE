@@ -1,0 +1,17 @@
+ar:
+  devise:
+    confirmations:
+      not_found_in_database: 'البريد الإلكتروني أو كلمة المرور غير صحيحين'
+      unauthenticated: 'يجب أن تكون مسجلًا للدخول حتى تستطيع المتابعة'
+    failure:
+      invalid: 'بريد إلكتروني أو كلمة مرور غير صالحة'
+      unauthenticated: 'يجب أن تكون مسجلًا للدخول حتى تستطيع المتابعة'
+    passwords:
+      send_instructions: 'سوف نرسل لك بريدًا إلكترونيًا يحتوي على تعليمات خاصة بتغيير كلمة المرور'
+      updated: 'تم تغيير كلمة المرور بنجاح، وتم تسجيل الدخول'
+    registrations:
+      signed_up: 'أهلًا بك، تم تسجيل دخولك بنجاح'
+    sessions:
+      signed_in: 'تم تسجيل الدخول بنجاح'
+      signed_out: 'تم تسجيل الخروج بنحاح'
+      already_signed_out: 'تم تسجيل الخروج بنجاح'
